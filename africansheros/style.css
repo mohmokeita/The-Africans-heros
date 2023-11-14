@@ -1,0 +1,275 @@
+/* mise en pase standard du navigateur */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/* position du cops de la page */
+main{
+    position: relative;
+    top: 50px;
+    z-index: 0;
+}
+
+/* mise en forme du nav bar */
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    /* background-color: #bdbaba; */
+    background-color: #dfdcdc83;
+    /* border-bottom: 1px whitesmoke; */
+    border-bottom: 1px solid#b4adad ;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+/* image d'acceuil */
+main .imgacc{
+    width: 30%;
+    height: 100px;
+}
+
+/* mise en forme du logo */
+header .titre{
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    position: absolute;
+    margin-top: 10px;
+    left: 50px;
+    font-weight: bold;
+}
+
+/* modif sur le span du logo */
+header .titre span{
+    color: rgb(224, 37, 37);
+    font-size: 22px;  
+ }
+
+/* menu */
+header .menu{
+    /* position: relative;
+    left: 500px;  */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header .menu ul{
+    display: flex;
+}
+
+header .menu li a{
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header .menu li{
+    margin-top: 10px;
+    list-style-type: none;
+    text-align: center;
+}
+
+header .menu ul li .actif{
+    color: rgb(224, 37, 37);
+    margin-left: 300px;
+}
+
+header .menu ul li a:hover{
+    color: rgb(224, 37, 37);
+    background-color: #ebdddd;
+}
+
+/* barre de recherche et boutton enregistrer */
+ header nav .recherche{
+    position: relative;
+    margin-right: 10px;
+}
+
+/* input de la barre de recherche */
+header nav .recherche input{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+/* bouton rechercher */
+header nav .recherche .icons{
+    padding: 12px;
+    background-color: #dfdcdc83;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* boutton sign in */
+header nav .recherche .sign-in-btn{
+    border: none;
+    /* background-color: linear-gradient(225deg, 
+    #27d86c 0%, #26caf8 50%, #c625d0 100%); */
+    background: linear-gradient(225deg, 
+    #5aa878 0%, #26caf8 50%, #996b9d 100%);
+    color: white;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* grand titre */
+main h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10Px;
+}
+
+/* repartiton du containeur */
+.container{
+    display: flex;
+}
+
+/* partie sommaire */
+.container .sommaire{
+    height: 400px;
+    width: 20%;
+    position: relative;
+    top: 50px;
+    left: 20px;
+    border: 1px #000;
+    background-color: #dfdcdc83;
+    border-radius: 3%;
+}
+
+/* le menu du sommaire */
+.container .sommaire ul li .actif{
+    color: rgb(224, 37, 37);
+}
+
+.container .sommaire ul li a:hover{
+    color: rgb(224, 37, 37);
+    text-decoration: underline;
+}
+
+/* titre du sommaire */
+.container .sommaire h2{
+    text-align: center;
+    padding: 5px;
+}
+
+/* les liens sur les differents chapitres */
+.container .sommaire li{
+    text-align: center;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.container .sommaire li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 200;
+}
+
+/* partie expo */
+.container .expo{
+    height: 100%;
+    width: 75%;
+    position: relative;
+    left: 5%;
+    top: 20px;
+}
+
+.container .expo h2{
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* slider */
+.slider_focus{
+    max-width: 500px;
+    margin: 2rem auto;
+    float: left;
+    position: absolute;
+    left: 20px;
+}	
+
+.slider_focus ul{
+    margin: 0;
+    padding: 0;
+    list-style-type:none;
+    display:flex;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+    aspect-ratio:3/2;
+    gap:.5rem;	
+}
+
+.slider_focus ul li{       
+    align-self:flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:.5rem;
+    height:4rem;
+    width: 4rem;
+}
+	
+.slider_focus ul li button	{ 
+    all: unset;
+    padding:0;
+    border:0;
+    cursor: pointer; 
+}
+
+.slider_focus ul li button img{	
+    border-radius: 50%;
+    border:2px solid white; 
+    width:4rem;
+    height:4rem;object-fit: cover
+}
+	
+.slider_focus ul li span img{	
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    transform:translateX(-100%);
+    z-index:-1;
+    opacity:0;
+    will-change: transform,opacity;
+    transition:transform .6s,opacity .6s
+}
+
+.slider_focus ul:not(:focus-within) li:first-child span img,
+.slider_focus ul li:focus-within span img{	
+    transform:translateX(0%);
+    opacity:1
+}
+
+.slider_focus ul li:focus-within{
+    outline:2px solid black;
+    border-radius: 50%
+}
+	
+
+.slider_focus ul:not(:focus-within) li:first-child button img,	
+.slider_focus ul li:focus-within button img{
+    opacity: .4
+}
+
+
